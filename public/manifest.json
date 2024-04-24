@@ -1,15 +1,15 @@
 {
-  "short_name": "Designer",
-  "name": "Contour Designer",
+  "short_name": "ГОРПРОЕКТ",
+  "name": "ГОРПРОЕКТ by lowndmc",
   "icons": [
     {
       "src": "images/logo.png",
-      "sizes": "256x256",
+      "sizes": "32x32",
       "type": "image/png"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#131313",
+  "background_color": "#131313"
 }
