@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import classnames from "classnames";
 
 import Header from "components/Header";
@@ -14,10 +13,6 @@ import InformationBlock from "./InformationBlock";
 function HomePage() {
   return (
     <div className={classnames(mainContainerStyles, darkThemeStyles)}>
-      <Helmet>
-        <meta name="theme-color" content="#131313" />
-        <title>ГОРПРОЕКТ - Главная</title>
-      </Helmet>
       <Header />
       <Projects />
       <InformationBlock />
