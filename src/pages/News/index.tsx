@@ -27,6 +27,7 @@ function NewsPage() {
     <div className={classnames(mainContainerStyles, lightThemeStyles)}>
       <Helmet>
         <meta name="theme-color" content="#fff" />
+        <title>ГОРПРОЕКТ - Новости</title>
       </Helmet>
       <Header sticky />
       <div className={newsContainerStyles}>
