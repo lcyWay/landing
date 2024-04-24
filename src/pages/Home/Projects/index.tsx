@@ -18,15 +18,15 @@ function Projects() {
 
   return (
     <div className={projectContainerStyles}>
-      <video
-        src={`/videos/${activeProject.src}.mp4`}
-        className={projectVideoStyles}
-        preload="none"
-        autoPlay
-        muted
-        playsInline
-        loop
-      />
+      {REVERSED_PROJECTS.map((project) => {
+        const isActive = project.id === activeProject.id;
+        if (!isActive) return null;
+        return (
+          <video className={projectVideoStyles} autoPlay muted playsInline loop>
+            <source src={`/videos/${project.src}.mp4`} type="video/mp4" />
+          </video>
+        );
+      })}
       <div className={projectLayoutStyles}>
         {REVERSED_PROJECTS.map((project) => {
           const isActive = project.id === activeProject.id;
