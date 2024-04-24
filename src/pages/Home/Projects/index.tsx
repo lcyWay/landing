@@ -16,14 +16,16 @@ const REVERSED_PROJECTS = projects.slice().reverse();
 function Projects() {
   const [activeProject, setActiveProject] = React.useState(REVERSED_PROJECTS[0]);
 
+  const copressed = window.innerWidth <= 1024;
+
   return (
     <div className={projectContainerStyles}>
       {REVERSED_PROJECTS.map((project) => {
         const isActive = project.id === activeProject.id;
         if (!isActive) return null;
         return (
-          <video className={projectVideoStyles} autoPlay muted playsInline loop>
-            <source src={`/videos/${project.src}.mp4`} type="video/mp4" />
+          <video key={project.id} className={projectVideoStyles} autoPlay muted playsInline loop>
+            <source src={`/videos/${project.src}${copressed ? "-compressed" : ""}.mp4`} type="video/mp4" />
           </video>
         );
       })}
