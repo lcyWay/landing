@@ -1,5 +1,6 @@
 import React from "react";
 import classnames from "classnames";
+import { Helmet } from "react-helmet";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import Header from "components/Header";
@@ -55,6 +56,10 @@ function HomePage() {
 
   return (
     <div className={classnames(mainContainerStyles, lightThemeStyles)}>
+      <Helmet>
+        <meta name="theme-color" content="#fff" />
+        <title>ГОРПРОЕКТ - О компании</title>
+      </Helmet>
       <Header sticky />
       <Tabs currentTab={currentTab} />
       <CompanyTab />

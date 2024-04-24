@@ -1,5 +1,6 @@
 import React from "react";
 import classnames from "classnames";
+import { Helmet } from "react-helmet";
 import { useNavigate, useParams } from "react-router-dom";
 
 import Header from "components/Header";
@@ -34,6 +35,10 @@ function DetailNewsPage() {
 
   return (
     <div className={classnames(mainContainerStyles, lightThemeStyles)}>
+      <Helmet>
+        <meta name="theme-color" content="#fff" />
+        <title>ГОРПРОЕКТ - Новости</title>
+      </Helmet>
       <Header sticky />
       <div className={detailNewsContainerStyles}>
         <div>

@@ -1,5 +1,6 @@
 import React from "react";
 import classnames from "classnames";
+import { Helmet } from "react-helmet";
 
 import Header from "components/Header";
 import Footer from "components/Footer";
@@ -14,6 +15,10 @@ import { servicesContainerStyles, servicesImageStyles, servicesRowStyles, servic
 function ServicesPage() {
   return (
     <div className={classnames(mainContainerStyles, lightThemeStyles)}>
+      <Helmet>
+        <meta name="theme-color" content="#fff" />
+        <title>ГОРПРОЕКТ - Услуги</title>
+      </Helmet>
       <Header sticky />
       <div className={servicesContainerStyles}>
         <div className={servicesTitleStyles}>УСЛУГИ</div>

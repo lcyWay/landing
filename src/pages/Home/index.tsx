@@ -16,7 +16,7 @@ function HomePage() {
     <div className={classnames(mainContainerStyles, darkThemeStyles)}>
       <Helmet>
         <meta name="theme-color" content="#131313" />
-        <title>ГОРПРОЕКТ - Главная</title>
+        <title>ГОРПРОЕКТ</title>
       </Helmet>
       <Header />
       <Projects />

@@ -1,5 +1,6 @@
 import React from "react";
 import classnames from "classnames";
+import { Helmet } from "react-helmet";
 
 import Header from "components/Header";
 import Footer from "components/Footer";
@@ -44,6 +45,10 @@ function ProjectsPage() {
 
   return (
     <div className={classnames(mainContainerStyles, darkThemeStyles)}>
+      <Helmet>
+        <meta name="theme-color" content="#131313" />
+        <title>ГОРПРОЕКТ - Проекты</title>
+      </Helmet>
       <Header sticky />
       <div className={projectsContainerStyles}>
         <Typography fontSize="bold" lineHeight="bold" fontWeight="medium" letterSpacing="3px">

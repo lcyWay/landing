@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
 import Header from "components/Header";
@@ -14,6 +15,10 @@ import { notFoundContainerStyles } from "./style.css";
 function NotFoundPage() {
   return (
     <div className={classNames(mainContainerStyles, lightThemeStyles)}>
+      <Helmet>
+        <meta name="theme-color" content="#fff" />
+        <title>Страница не найдена</title>
+      </Helmet>
       <Header sticky />
       <div className={notFoundContainerStyles}>
         <Typography fontSize="title" lineHeight="title" fontWeight="medium" letterSpacing="1px">

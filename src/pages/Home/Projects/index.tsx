@@ -24,6 +24,7 @@ function Projects() {
         preload="none"
         autoPlay
         muted
+        playsInline
         loop
       />
       <div className={projectLayoutStyles}>
