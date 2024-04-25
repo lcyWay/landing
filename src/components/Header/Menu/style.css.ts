@@ -1,10 +1,12 @@
 import { globalStyle, style } from "@vanilla-extract/css";
 
+import { showAnimationStyles } from "styles/animations.css";
+
 import { globalTheme } from "styles/theme.css";
 
 export const menuContainerStyles = style({
   display: "none",
-  padding: "0 8px",
+  padding: "12px",
 
   "@media": {
     "(max-width: 1024px)": {
@@ -27,12 +29,16 @@ export const menuModalContainerStyles = style({
   display: "flex",
   flexDirection: "column",
   gap: 4,
+  paddingTop: 4,
 });
 
-export const menuModalItemStyles = style({
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  padding: "12px 0",
-  borderBottom: `1px solid ${globalTheme.palette.border}`,
-});
+export const menuModalItemStyles = style([
+  showAnimationStyles,
+  {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "12px 0",
+    borderBottom: `1px solid ${globalTheme.palette.border}`,
+  },
+]);

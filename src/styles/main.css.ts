@@ -31,11 +31,20 @@ export const mainContainerStyles = style({
   transition: `background ${globalTheme.transition}`,
 });
 
-globalStyle(`*`, {
+globalStyle("*", {
   fontFamily: "Graphik, sans-serif",
   fontSize: globalTheme.fontSizes.normal,
   color: globalTheme.colors.primary,
   textDecoration: "none",
+});
+
+globalStyle("body", {
+  margin: 0,
+});
+
+globalStyle(".without-scroll", {
+  overflow: "hidden",
+  height: "100vh",
 });
 
 globalStyle(".link", {

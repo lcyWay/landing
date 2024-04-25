@@ -12,7 +12,12 @@ import { menuContainerStyles, menuModalContainerStyles, menuModalItemStyles } fr
 function Menu() {
   const [isModalVisible, setModalVisible] = React.useState(false);
 
-  const handleMenuToggle = React.useCallback(() => setModalVisible((value) => !value), []);
+  const handleMenuToggle = React.useCallback(() => {
+    setModalVisible(!isModalVisible);
+    document.body.classList[isModalVisible ? "remove" : "add"]("without-scroll");
+  }, [isModalVisible]);
+
+  React.useEffect(() => () => document.body.classList.remove("without-scroll"), []);
 
   return (
     <>

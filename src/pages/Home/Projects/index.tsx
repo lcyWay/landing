@@ -24,7 +24,15 @@ function Projects() {
         const isActive = project.id === activeProject.id;
         if (!isActive) return null;
         return (
-          <video key={project.id} className={projectVideoStyles} autoPlay muted playsInline loop>
+          <video
+            key={project.id}
+            className={projectVideoStyles}
+            poster={`/images/home_page/${project.src}.jpg`}
+            autoPlay
+            muted
+            playsInline
+            loop
+          >
             <source src={`/videos/${project.src}${copressed ? "-compressed" : ""}.mp4`} type="video/mp4" />
           </video>
         );
