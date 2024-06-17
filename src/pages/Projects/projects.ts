@@ -16,7 +16,7 @@ export const projects: ProjectInterface[] = [
   {
     id: "moscow_city_square",
     title: "Общегородская площадь «Москва-Сити»",
-    shortTitle: "ГОРДСКАЯ ПЛОЩАДЬ",
+    shortTitle: "ГОРОДСКАЯ ПЛОЩАДЬ",
     city: "Москва",
     src: "1",
     customer: "ГУП «Центр-Сити»",
